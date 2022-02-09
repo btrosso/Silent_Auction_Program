@@ -1,17 +1,22 @@
 from art import logo
 import os
 
-#print the ascii art for the program
+# print the ascii art for the program
 
 participants = {}
 more_participants = True
 
-while more_participants == True:
+while more_participants:
     print(logo)
     name = input("Please enter your name: ").lower()
     bid_price = int(input("Please enter a bid proce: "))
 
     def add_participant(p_name, bid):
+        """
+        first docstring practice: this can be used to add documentation to functions.
+        this function takes a name and a bid as parameters and adds that information
+        to the participants{}
+        """
         participants[p_name] = bid
 
     add_participant(p_name=name, bid=bid_price)
